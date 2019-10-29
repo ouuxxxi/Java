@@ -5,7 +5,7 @@ public class Practice4 {
             if((year%100!=0 )&& (year%4==0)||(year%400==0))
             {
                 System.out.println(year);
-            }
+            }//
         }
     }
 }
