@@ -1,0 +1,59 @@
+package javaapplication6;
+
+
+/**
+ *
+ * @author Administrator
+ */
+public class JavaApplication6 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+       Rectangle s1 = new Rectangle(4,40);
+       System.out.println("The width of rectangle is " + s1.width);
+       System.out.println("The height of rectangle is " + s1.height);
+       System.out.println("The area of rectangle is " + s1.getArea());
+       System.out.println("The perimeter of rectangle is " + s1.getPerimeter());
+       System.out.println("                  ");
+      
+       Rectangle s2 = new Rectangle(3.5,35.9);
+       System.out.println("The width of rectangle is " + s2.width);
+       System.out.println("The height of rectangle is " + s2.height);
+       System.out.println("The area of rectangle is " + s2.getArea());
+       System.out.println("The perimeter of rectangle is " + s2.getPerimeter());
+    
+    
+    }  
+}
+       
+    class  Rectangle{
+         public double width;
+         public double height;
+         public   Rectangle(){
+             this.width = 1;
+             this.height = 1; 
+         } 
+        public Rectangle(double newWidth, double newHeight ){ 
+             width = newWidth;
+             height = newHeight;
+         }
+   
+        public double getArea(){
+            return width * height;
+          } 
+       public double getPerimeter(){
+           return  (width + height) * 2;
+       }
+      
+       void setWidth(double newWidth){
+         width = newWidth;
+       }   
+       void setHeight(double newHeight){
+       height = newHeight;
+       }
+      
+       }
