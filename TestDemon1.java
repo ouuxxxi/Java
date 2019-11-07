@@ -1,5 +1,5 @@
 //反转单列表
-
+/*
 class ListNode {
     public int data; //data可以是任何类型
     public ListNode next;
@@ -17,10 +17,10 @@ class TestDemon1 {
         this.head = null;
     }
     //单链表
-    private void addLast(int data) {
+    private void addFirst(int data) {
         ListNode node=new ListNode(data);
         if(this.head==null){
-            node=this.head;
+            this.head=node;
         }else{
             node.next=this.head;
             this.head=node;
@@ -39,7 +39,6 @@ class TestDemon1 {
             cur.next=prev;
             prev=cur;
             cur=curNext;
-            curNext=cur.next;
         }
         return newHead;
     }
@@ -54,16 +53,27 @@ class TestDemon1 {
         }
         System.out.println();
     }
+    public void display2(ListNode newHead) {
+        ListNode cur = newHead;
+        while (cur != null) {
+            System.out.print(cur.data + " ");
+            cur = cur.next;
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         TestDemon1 mySignalList = new TestDemon1();
-        mySignalList.addLast(1);
-        mySignalList.addLast(2);
-        mySignalList.addLast(3);
-        mySignalList.addLast(4);
-        mySignalList.addLast(5);
+        mySignalList.addFirst(1);
+        mySignalList.addFirst(2);
+        mySignalList.addFirst(3);
+        mySignalList.addFirst(4);
+        mySignalList.addFirst(5);
         mySignalList.display();
-        System.out.println(mySignalList.reserveList());
+
+       ListNode node=mySignalList.reserveList();
+        mySignalList.display2(node);
+
     }
 
-
 }
+*/
