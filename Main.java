@@ -1,36 +1,23 @@
+//输入一个字符串，求出该字符串包含的字符集合 重复出现并靠后的字母不输出
+//例如：abcdefghabc  结果：abcdefgh
 import java.util.Scanner;
-    public class Main {
-        public static void main(String[] args) {
-           Scanner input = new Scanner(System.in);
-            String a = input.next();
-            byte[] b = a.getBytes();
-            for (int i = 0; i < b.length; i++) {
-                if (b[i] == 'a') {
-                    System.out.println("a");
-                    break;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in) ;
+            while(input.hasNext())//循环读入
+            {
+                String str = input.nextLine();
+                StringBuilder a = new StringBuilder();
+                for (int i = 0; i < str.length(); i++) {
+                    char temp = str.charAt(i);//字符
+                    if (!a.toString().contains(temp + "")) {
+                        //StringBuilder是没有cntains方法的，必须将它转化为字符串类型
+                        //temp是字符 拼接一个字符串 就是字符串；temp拼接一个空的字符串
+                        a.append(temp);
+                    }
                 }
-                 if (b[i] == 'e') {
-                    System.out.println("e");
-                    break;
-                }
-               if (b[i] == 'i') {
-                    System.out.println("i");
-                    break;
-                }
-                 if (b[i] == 'o') {
-                    System.out.println("o");
-                    break;
-                }
-                 if (b[i] == 'u') {
-                    System.out.println("u");
-                    break;
-                }
-                else if (b[i] == '\0'){
-                    System.out.println("n");
-                }
-
             }
+        System.out.println(args.toString());
         }
     }
-
 
